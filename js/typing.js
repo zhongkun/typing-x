@@ -8,6 +8,9 @@ $(document).ready(function () {
 		clearText();
 		
 		var txt = $('#code_txt').html();
+		var divTxt = $('#main_div');
+
+		$('#main_div').html(txt);
 		
 		
 		console.log('code_txt', txt);
