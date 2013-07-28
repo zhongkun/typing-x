@@ -24,6 +24,9 @@
            var error = 0;
            var lost = 0;
            var spanObj = null;
+	  console.log('div length', divTxt.length);
+	  console.log('txt length', txt.length);
+
            for (var i = 0; i < divTxt.length; i++) {
                if (i >= txt.length + lost) {
                    break;
@@ -46,7 +49,7 @@
                        addSpan(spanObj);
                        spanObj = null;
                    }
-					continue;
+	    continue;
                }
 
                var charWidth = divTxt.charCodeAt(i) > 255 ? 24 : 13;
@@ -57,6 +60,7 @@
                    spanObj.color = color;
                    spanObj.height = 24;
                    spanObj.width = charWidth;
+	    console.log('color', color);
                }
                else {
                    spanObj.width += charWidth;
